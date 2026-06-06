@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Dimark Skincare Science</title>
+  <meta name="description" content="Discover the origins, clinical backing, and clean beauty principles behind Dimark Skincare products.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              light: '#F0F4F1',
+              DEFAULT: '#2C5E43',
+              dark: '#1E3F2E',
+            },
+            gold: {
+              DEFAULT: '#D4AF37',
+              dark: '#AA8B2C',
+            },
+            cream: {
+              DEFAULT: '#FAF7F2',
+              dark: '#F3ECE0',
+            },
+            charcoal: '#1C2321',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/global.css">
+</head>
+<body class="bg-cream text-charcoal">
+
+  <!-- Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- About Banner -->
+  <section class="bg-emerald-950 py-20 text-white text-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-cover bg-center" style="background-image: url('./assets/images/hero-bg.png');"></div>
+    <div class="relative max-w-4xl mx-auto px-4 z-10 animate-fade-in-up">
+      <span class="text-gold font-bold text-xs uppercase tracking-widest block mb-2">Our Origins & Purpose</span>
+      <h1 class="font-serif text-4xl sm:text-5xl font-extrabold mb-4">The Science of Healthy Glow</h1>
+      <div class="w-24 h-1 bg-gold mx-auto mt-4"></div>
+    </div>
+  </section>
+
+  <!-- Brand Story -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-xs font-bold text-emerald-800 uppercase tracking-widest block mb-2">Purity Meets Research</span>
+        <h2 class="font-serif text-3xl font-bold text-emerald-950 mb-6">Born from Clinical Dermatology</h2>
+        <p class="text-stone-600 text-sm leading-relaxed mb-4">
+          Established in 2021, **Dimark Skincare** was founded with a singular, clear directive: to bridge the gap between traditional organic ingredients and modern chemical dermatology. 
+        </p>
+        <p class="text-stone-600 text-sm leading-relaxed mb-4">
+          We saw an over-saturation of skincare products making empty claims without biological backup, or relying on aggressive, unsafe bleaching agents that destroy the skin barrier. Working alongside molecular chemists and dermatological testers, we spent 3 years perfecting formulations that respect the skin's natural pH while targeting stubborn discoloration.
+        </p>
+        <p class="text-stone-600 text-sm leading-relaxed mb-6">
+          Every jar of Dimark is manufactured under strict lab supervision, incorporating stabilized active molecules (like Niacinamide, Retinol, and Vitamin C) suspended in natural botanical bases (like Centella and Aloe Vera).
+        </p>
+        
+        <!-- Small highlight -->
+        <div class="border-l-4 border-gold bg-stone-50 p-4 rounded-r-lg">
+          <p class="text-xs text-stone-600 italic leading-relaxed">
+            "Our philosophy is simple: Remove hyperpigmentation triggers, rebuild the lipid barrier, and maintain a protected, luminous glow using clean ingredients."
+          </p>
+          <span class="block text-[10px] font-bold text-emerald-800 uppercase tracking-widest mt-2">— Dr. Samantha Cooray, Clinical Advisory Lead</span>
+        </div>
+      </div>
+
+      <!-- Story visual block -->
+      <div class="flex justify-center">
+        <div class="w-full max-w-md aspect-[4/3] bg-stone-100 rounded-xl overflow-hidden shadow-lg border border-stone-200">
+          <img src="./assets/images/hero-bg.png" alt="Clinical lab environment" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Clinical Principles -->
+  <section class="py-20 bg-cream border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-emerald-800 uppercase tracking-widest block mb-2">Our Standards</span>
+        <h2 class="font-serif text-3xl font-bold text-emerald-950">Skincare without Compromise</h2>
+        <div class="w-24 h-1 bg-gold mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl border border-stone-200 shadow-sm text-center">
+          <div class="w-12 h-12 rounded-full bg-emerald-50 text-emerald-800 flex items-center justify-center font-bold mx-auto mb-6">🧪</div>
+          <h3 class="font-serif text-lg font-bold text-emerald-950 mb-3">100% Bio-Available</h3>
+          <p class="text-stone-500 text-xs leading-relaxed">We formulate using molecular weights that can successfully penetrate the outer epidermis layer to work inside cell structures, rather than sitting uselessly on top.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl border border-stone-200 shadow-sm text-center">
+          <div class="w-12 h-12 rounded-full bg-emerald-50 text-emerald-800 flex items-center justify-center font-bold mx-auto mb-6">🌱</div>
+          <h3 class="font-serif text-lg font-bold text-emerald-950 mb-3">Cruelty-Free & Vegan</h3>
+          <p class="text-stone-500 text-xs leading-relaxed">None of our raw materials or final formulations are ever tested on animals. We substitute animal products with highly effective plant-derived peptides and ceramides.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl border border-stone-200 shadow-sm text-center">
+          <div class="w-12 h-12 rounded-full bg-emerald-50 text-emerald-800 flex items-center justify-center font-bold mx-auto mb-6">♻️</div>
+          <h3 class="font-serif text-lg font-bold text-emerald-950 mb-3">Eco-Conscious Packaging</h3>
+          <p class="text-stone-500 text-xs leading-relaxed">Our clinical glass jars and cardboard outer boxes are 100% recyclable, and we actively work with local recycling hubs to support sustainable plastic return cycles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA section -->
+  <section class="bg-emerald-900 py-16 text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-serif text-3xl font-bold mb-4">Ready to Start Your Skincare Regimen?</h2>
+      <p class="text-stone-300 text-sm mb-8 max-w-md mx-auto">Take our clinical skin consultation assessment and find the perfect formula for your skin concerns.</p>
+      <a href="contact.html" class="px-8 py-4 bg-gold hover:bg-gold-dark text-emerald-950 font-bold rounded shadow-lg transition tracking-widest uppercase text-sm btn-gold-hover">Take Skin Assessment</a>
+    </div>
+  </section>
+
+  <!-- Footer Placeholders -->
+  <div id="footer-placeholder"></div>
+  <div id="cart-drawer-placeholder"></div>
+
+  <!-- Javascript Core -->
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

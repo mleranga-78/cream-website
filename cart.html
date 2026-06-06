@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Bag | Dimark Skincare</title>
+  <meta name="description" content="Manage your premium skincare selections and apply discount codes before checking out.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              light: '#F0F4F1',
+              DEFAULT: '#2C5E43',
+              dark: '#1E3F2E',
+            },
+            gold: {
+              DEFAULT: '#D4AF37',
+              dark: '#AA8B2C',
+            },
+            cream: {
+              DEFAULT: '#FAF7F2',
+              dark: '#F3ECE0',
+            },
+            charcoal: '#1C2321',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/global.css">
+</head>
+<body class="bg-cream text-charcoal">
+
+  <!-- Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- Main Cart Section -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="font-serif text-3xl font-bold text-emerald-950 mb-10 border-b border-stone-200 pb-4">Your Skincare Selection</h1>
+
+    <div id="cart-layout-container" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- LHS: Cart Items List -->
+      <div class="lg:col-span-8 bg-white border border-stone-200 rounded-xl p-6 shadow-sm overflow-x-auto">
+        <table class="w-full min-w-[600px]">
+          <thead>
+            <tr class="border-b border-stone-200 text-xs font-bold text-stone-500 uppercase tracking-widest text-left">
+              <th class="pb-4">Product Details</th>
+              <th class="pb-4">Unit Price</th>
+              <th class="pb-4">Quantity</th>
+              <th class="pb-4 text-right">Subtotal</th>
+              <th class="pb-4 text-center"></th>
+            </tr>
+          </thead>
+          <tbody id="cart-page-items" class="divide-y divide-stone-100">
+            <!-- Dynamically populated via app.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- RHS: Order Summary Panel -->
+      <div class="lg:col-span-4 bg-white border border-stone-200 rounded-xl p-6 shadow-sm">
+        <h3 class="font-serif text-lg font-bold text-emerald-900 border-b border-stone-150 pb-3 mb-4">Bag Summary</h3>
+        
+        <div class="space-y-3 mb-6">
+          <div class="flex justify-between text-sm text-stone-600">
+            <span>Items Subtotal</span>
+            <span id="cart-subtotal">Rs. 0</span>
+          </div>
+          
+          <div id="cart-discount-row" class="flex justify-between text-sm text-emerald-700 hidden">
+            <span>Special Discount</span>
+            <span id="cart-discount">- Rs. 0</span>
+          </div>
+
+          <div class="flex justify-between text-sm text-stone-600">
+            <span>Shipping Handling</span>
+            <span class="text-emerald-800 font-semibold uppercase text-xs">Free Delivery</span>
+          </div>
+
+          <div class="flex justify-between font-serif text-lg font-bold text-emerald-950 border-t border-stone-150 pt-3">
+            <span>Grand Total</span>
+            <span id="cart-total">Rs. 0</span>
+          </div>
+        </div>
+
+        <!-- Promo Code Section -->
+        <div class="border-t border-stone-150 pt-4 mb-6">
+          <label for="cart-promo-input" class="block text-xs font-semibold text-stone-500 uppercase tracking-wider mb-2">Have a Promo Code?</label>
+          <form id="cart-promo-form" class="flex gap-2">
+            <input 
+              type="text" 
+              id="cart-promo-input" 
+              placeholder="e.g. GLOW15" 
+              required
+              class="flex-1 px-3 py-2 border border-stone-300 rounded focus:outline-none focus:ring-2 focus:ring-emerald-800 text-sm placeholder-stone-400"
+            />
+            <button type="submit" class="px-4 py-2 bg-stone-800 text-white font-bold text-xs uppercase tracking-wider rounded hover:bg-stone-900 transition">Apply</button>
+          </form>
+          <p class="text-[10px] text-stone-400 mt-1.5 italic">Enter "GLOW15" to secure 15% off your first checkout!</p>
+        </div>
+
+        <a href="checkout.html" class="block w-full text-center py-4 bg-emerald-800 text-white font-bold text-sm tracking-wider uppercase rounded-lg shadow hover:bg-emerald-950 transition btn-sage-hover">Proceed to Checkout</a>
+        <a href="shop.html" class="block w-full text-center text-xs font-bold text-stone-600 hover:text-emerald-850 transition underline mt-4">Continue Shopping</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Placeholders -->
+  <div id="footer-placeholder"></div>
+  <div id="cart-drawer-placeholder"></div>
+
+  <!-- Javascript Core -->
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

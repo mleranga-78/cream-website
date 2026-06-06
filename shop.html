@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Collection | Dimark Skincare Cream Products</title>
+  <meta name="description" content="Browse our catalog of clinical dermatological creams. Sort and filter to find the perfect formula for your skin type.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              light: '#F0F4F1',
+              DEFAULT: '#2C5E43',
+              dark: '#1E3F2E',
+            },
+            gold: {
+              DEFAULT: '#D4AF37',
+              dark: '#AA8B2C',
+            },
+            cream: {
+              DEFAULT: '#FAF7F2',
+              dark: '#F3ECE0',
+            },
+            charcoal: '#1C2321',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/global.css">
+</head>
+<body class="bg-cream text-charcoal">
+
+  <!-- Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- Shop Header Banner -->
+  <section class="bg-emerald-950 py-16 text-white text-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-cover bg-center" style="background-image: url('./assets/images/hero-bg.png');"></div>
+    <div class="relative max-w-4xl mx-auto px-4 z-10">
+      <h1 class="font-serif text-3xl sm:text-5xl font-extrabold mb-4">Dimark Apothecary & Shop</h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+        Explore our meticulously balanced formulas engineered for skin barrier rejuvenation, pigment corrections, and complete dermal health.
+      </p>
+    </div>
+  </section>
+
+  <!-- Shop Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Controls Layout (Search, Category, Sort) -->
+    <div class="bg-white rounded-xl border border-stone-200 p-6 shadow-sm mb-10">
+      <div class="flex flex-col lg:flex-row gap-6 items-center justify-between">
+        
+        <!-- Search bar -->
+        <div class="relative w-full lg:max-w-xs">
+          <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </span>
+          <input 
+            type="text" 
+            id="shop-search" 
+            placeholder="Search formulas (e.g. Spot, Retinol)..." 
+            class="w-full pl-10 pr-4 py-2 border border-stone-300 rounded focus:outline-none focus:ring-2 focus:ring-emerald-800 text-sm"
+          />
+        </div>
+
+        <!-- Category Filters -->
+        <div id="shop-filters" class="flex flex-wrap gap-2 justify-center">
+          <!-- Dynamically inserted by app.js -->
+        </div>
+
+        <!-- Sorting selector -->
+        <div class="flex items-center gap-2 w-full lg:w-auto justify-end">
+          <label for="shop-sort" class="text-xs text-stone-500 font-semibold uppercase tracking-wider">Sort By:</label>
+          <select 
+            id="shop-sort" 
+            class="py-2 pl-3 pr-8 border border-stone-300 rounded focus:outline-none focus:ring-2 focus:ring-emerald-800 text-sm bg-white"
+          >
+            <option value="featured">Featured Favorites</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Shop Grid -->
+    <div id="shop-catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Dynamic list elements rendered here -->
+    </div>
+  </main>
+
+  <!-- Footer Placeholders -->
+  <div id="footer-placeholder"></div>
+  <div id="cart-drawer-placeholder"></div>
+
+  <!-- Javascript Core -->
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

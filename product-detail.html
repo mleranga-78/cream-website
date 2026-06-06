@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formula Details | Dimark Skincare</title>
+  <meta name="description" content="View clinical properties, active ingredients, instructions, and customer ratings for this specialized Dimark formula.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              light: '#F0F4F1',
+              DEFAULT: '#2C5E43',
+              dark: '#1E3F2E',
+            },
+            gold: {
+              DEFAULT: '#D4AF37',
+              dark: '#AA8B2C',
+            },
+            cream: {
+              DEFAULT: '#FAF7F2',
+              dark: '#F3ECE0',
+            },
+            charcoal: '#1C2321',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/global.css">
+</head>
+<body class="bg-cream text-charcoal">
+
+  <!-- Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-xs text-stone-500 flex items-center gap-2">
+    <a href="index.html" class="hover:text-emerald-800">Home</a>
+    <span>/</span>
+    <a href="shop.html" class="hover:text-emerald-800">Shop</a>
+    <span>/</span>
+    <span class="text-stone-800 font-semibold" id="detail-title-breadcrumb">Formula Detail</span>
+  </nav>
+
+  <!-- Product Highlight Section -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start bg-white border border-stone-200 rounded-2xl shadow-sm p-6 sm:p-10 mb-12">
+      
+      <!-- Product Image Gallery (LHS) -->
+      <div class="lg:col-span-6 flex flex-col items-center">
+        <div class="w-full aspect-square bg-stone-100 rounded-xl overflow-hidden border border-stone-200 relative">
+          <img id="detail-image" src="./assets/images/prod-spot-cream.png" alt="Dimark Product" class="w-full h-full object-cover" />
+          <span id="detail-badge" class="absolute top-4 left-4 bg-emerald-900 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Badge</span>
+        </div>
+      </div>
+
+      <!-- Product Meta details (RHS) -->
+      <div class="lg:col-span-6 flex flex-col justify-between h-full">
+        <div>
+          <!-- Star Ratings & Review Counts -->
+          <div class="flex items-center gap-2 mb-4">
+            <div id="detail-stars" class="flex text-amber-400 gap-0.5">
+              <!-- JS updates stars -->
+            </div>
+            <span id="detail-review-count" class="text-xs text-stone-500 font-semibold underline hover:text-emerald-800 cursor-pointer">0 Reviews</span>
+          </div>
+
+          <!-- Title & Tagline -->
+          <h1 id="detail-title" class="font-serif text-2xl sm:text-4xl font-bold text-emerald-950 mb-3 leading-tight">Dimark Product Title</h1>
+          <p id="detail-tagline" class="text-emerald-800 text-sm font-medium italic mb-6">Product short description tagline.</p>
+
+          <!-- Price Display -->
+          <div class="border-t border-b border-stone-200 py-4 mb-6">
+            <span id="detail-price" class="text-3xl font-bold text-stone-850">Rs. 0</span>
+            <span class="text-xs text-stone-400 ml-2">VAT Inclusive</span>
+          </div>
+
+          <!-- Form / Selection Inputs -->
+          <div class="space-y-6">
+            
+            <!-- Sizing Options -->
+            <div>
+              <h4 class="text-xs font-bold text-stone-500 uppercase tracking-widest mb-3">Select Volumetric Size:</h4>
+              <div class="flex gap-2">
+                <button onclick="selectDetailSize('50ml')" class="size-btn px-4 py-2 border-2 border-emerald-800 text-emerald-800 font-semibold bg-emerald-50 rounded">50ml</button>
+                <button onclick="selectDetailSize('100ml')" class="size-btn px-4 py-2 border border-stone-300 text-stone-700 bg-white hover:border-stone-400 rounded">100ml (Value Pack)</button>
+              </div>
+            </div>
+
+            <!-- Quantity Selection -->
+            <div>
+              <h4 class="text-xs font-bold text-stone-500 uppercase tracking-widest mb-3">Quantity:</h4>
+              <div class="flex items-center border border-stone-300 rounded w-32 bg-white">
+                <button onclick="changeDetailQty(-1)" class="px-3 py-2 text-stone-600 hover:bg-stone-100 font-bold">-</button>
+                <span id="detail-qty-val" class="flex-1 text-center font-semibold text-sm">1</span>
+                <button onclick="changeDetailQty(1)" class="px-3 py-2 text-stone-600 hover:bg-stone-100 font-bold">+</button>
+              </div>
+            </div>
+
+            <!-- Call-to-action Button -->
+            <button id="detail-add-btn" class="w-full py-4 bg-emerald-800 text-white font-bold rounded-lg shadow hover:bg-emerald-950 transition-colors uppercase tracking-wider text-sm btn-sage-hover">Add To Shopping Bag</button>
+
+          </div>
+        </div>
+
+        <!-- Small Trust factors -->
+        <div class="mt-8 border-t border-stone-150 pt-6 grid grid-cols-3 gap-4 text-center text-[10px] font-semibold text-stone-500 uppercase tracking-wider">
+          <div class="flex flex-col items-center">
+            <span class="text-emerald-800 text-base mb-1">☘</span>
+            <span>100% Vegan & Safe</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-emerald-800 text-base mb-1">⟲</span>
+            <span>7-Day Return policy</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-emerald-800 text-base mb-1">⚡</span>
+            <span>Island-Wide Delivery</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Product Deep-Dive Tab Container -->
+    <section class="bg-white border border-stone-200 rounded-2xl shadow-sm p-6 sm:p-10 mb-12">
+      <!-- Tab headers -->
+      <div class="flex border-b border-stone-200 gap-8 mb-6">
+        <button onclick="selectDetailTab('description')" data-tab="description" class="tab-header-btn font-serif text-lg font-bold border-b-2 border-emerald-800 pb-2 text-emerald-900">Description</button>
+        <button onclick="selectDetailTab('ingredients')" data-tab="ingredients" class="tab-header-btn font-serif text-lg text-stone-500 hover:text-stone-800 pb-2">Active Ingredients</button>
+        <button onclick="selectDetailTab('usage')" data-tab="usage" class="tab-header-btn font-serif text-lg text-stone-500 hover:text-stone-800 pb-2">How to Use</button>
+      </div>
+
+      <!-- Tab content body -->
+      <div id="detail-tab-body" class="min-h-[150px]">
+        <!-- Dynamic inserts here -->
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="bg-white border border-stone-200 rounded-2xl shadow-sm p-6 sm:p-10">
+      <h2 class="font-serif text-2xl font-bold text-emerald-950 mb-8 border-b border-stone-200 pb-4">Customer Reviews & Feedback</h2>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Submit Review Form -->
+        <div class="lg:col-span-5 bg-stone-50 p-6 rounded-xl border border-stone-200 shadow-inner">
+          <h3 class="font-serif text-lg font-bold text-emerald-900 mb-4">Write a Review</h3>
+          <form id="review-submit-form" class="space-y-4">
+            <div>
+              <label for="rev-name" class="block text-xs font-semibold text-stone-600 mb-1">Your Full Name:</label>
+              <input type="text" id="rev-name" required class="w-full px-3 py-2 border border-stone-300 rounded focus:outline-none focus:ring-2 focus:ring-emerald-800 text-sm" placeholder="e.g. Nimani Mendis" />
+            </div>
+            
+            <div>
+              <label for="rev-rating" class="block text-xs font-semibold text-stone-600 mb-1">Overall Rating:</label>
+              <select id="rev-rating" class="w-full px-3 py-2 border border-stone-300 rounded focus:outline-none focus:ring-2 focus:ring-emerald-800 text-sm bg-white">
+                <option value="5">⭐⭐⭐⭐⭐ (5 Stars)</option>
+                <option value="4">⭐⭐⭐⭐ (4 Stars)</option>
+                <option value="3">⭐⭐⭐ (3 Stars)</option>
+                <option value="2">⭐⭐ (2 Stars)</option>
+                <option value="1">⭐ (1 Star)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="rev-text" class="block text-xs font-semibold text-stone-600 mb-1">Your Feedback Description:</label>
+              <textarea id="rev-text" required rows="4" class="w-full px-3 py-2 border border-stone-300 rounded focus:outline-none focus:ring-2 focus:ring-emerald-800 text-sm" placeholder="Describe your experience with the cream texture, fragrance, and results..."></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3 bg-emerald-900 hover:bg-emerald-950 text-white font-bold rounded text-xs uppercase tracking-wider transition">Submit My Review</button>
+          </form>
+        </div>
+
+        <!-- Right: Reviews List -->
+        <div class="lg:col-span-7">
+          <div id="reviews-list-container" class="divide-y divide-stone-200">
+            <!-- Dynamic elements loaded here -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Placeholders -->
+  <div id="footer-placeholder"></div>
+  <div id="cart-drawer-placeholder"></div>
+
+  <!-- Javascript Core -->
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
